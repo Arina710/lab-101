@@ -1,0 +1,76 @@
+object Form1: TForm1
+  Left = 322
+  Height = 242
+  Top = 321
+  Width = 322
+  Caption = 'Будильник'
+  ClientHeight = 242
+  ClientWidth = 322
+  Color = 13880749
+  DesignTimePPI = 144
+  LCLVersion = '3.2.0.0'
+  object LabelAlarm: TLabel
+    Left = 24
+    Height = 25
+    Top = 12
+    Width = 208
+    Caption = 'Можете поставить время'
+    ParentColor = False
+  end
+  object EditHour: TEdit
+    Left = 24
+    Height = 33
+    Top = 88
+    Width = 120
+    NumbersOnly = True
+    TabOrder = 0
+  end
+  object EditMinute: TEdit
+    Left = 172
+    Height = 33
+    Top = 88
+    Width = 120
+    Anchors = [akTop, akRight]
+    NumbersOnly = True
+    TabOrder = 1
+  end
+  object ButtonSetAlarm: TButton
+    Left = 24
+    Height = 38
+    Top = 135
+    Width = 268
+    Anchors = [akLeft, akRight, akBottom]
+    Caption = 'Поставить будильник'
+    Color = clAqua
+    TabOrder = 2
+    OnClick = ButtonSetAlarmClick
+  end
+  object ButtonStopAlarm: TButton
+    Left = 24
+    Height = 38
+    Top = 190
+    Width = 268
+    Anchors = [akLeft, akRight, akBottom]
+    Caption = 'Остановить будильник'
+    TabOrder = 3
+    OnClick = ButtonStopAlarmClick
+  end
+  object Label1: TLabel
+    Left = 64
+    Height = 25
+    Top = 56
+    Width = 40
+    Caption = 'часы'
+  end
+  object Label2: TLabel
+    Left = 200
+    Height = 25
+    Top = 56
+    Width = 62
+    Caption = 'минуты'
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 252
+  end
+end
